@@ -7,7 +7,7 @@ public class TestModel {
 		System.out.println(model.getShapes());
 		model.creaGrafo("cylinder", 2000);
 		System.out.println(model.getSommaPesi());
-		System.out.println(model.simulaDefcon(2000, 20, 10, "cylinder"));
+		System.out.println(model.simulaDefcon(2000, 90, 100, "cylinder"));
 	}
 
 }

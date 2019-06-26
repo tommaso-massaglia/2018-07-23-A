@@ -22,7 +22,7 @@ public class Simulatore {
 	public String getDefconStati() {
 		String result = "";
 		for (StatoDefcon sd : this.statiDefcon.values()) {
-			result += "Lo stato " + sd.getStato().getName() + " ha livelo DEFCON:" + sd.getDefcon() + "\n";
+			result += "Lo stato " + sd.getStato().getName() + " ha livello DEFCON:" + sd.getDefcon() + "\n";
 		}
 		return result;
 	}
@@ -76,12 +76,18 @@ public class Simulatore {
 		if (this.statiDefcon.get(stato).getDefcon() - quantita >= 1) {
 			this.statiDefcon.get(stato).addDefcon(quantita);
 		}
+		else {
+			this.statiDefcon.get(stato).setDefcon(1);
+		}
 		return false;
 	}
 
 	private void riduciDefcon(double quantita, String stato) {
 		if (this.statiDefcon.get(stato).getDefcon() + quantita <= 5) {
 			this.statiDefcon.get(stato).removeDefcon(quantita);
+		}
+		else {
+			this.statiDefcon.get(stato).setDefcon(5);
 		}
 		return;
 	}

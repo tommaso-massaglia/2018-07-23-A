@@ -22,8 +22,12 @@ public class StatoDefcon {
 		return defcon;
 	}
 
+	public void setDefcon(double defcon) {
+		this.defcon = defcon;
+	}
+
 	public void removeDefcon(double quantita) {
-		this.defcon+=quantita;
+		this.defcon += quantita;
 	}
 
 	public void addDefcon(double quantita) {
